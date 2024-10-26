@@ -1,0 +1,41 @@
+<header id="mainheader">
+  <nav>
+      <ul>
+          <li><img src="assets/cake.svg" height="55" /></li>
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/tousdetails']">Tous</a></li>
+      </ul>
+  </nav>
+</header>
+
+<div style="width:1000px; margin-left: auto; margin-right: auto;">
+  <aside id="leftmenu">
+      <img src="assets/logo.png" />
+      <header>
+          <h4 style="text-align: center;">Explorez nos cakes</h4>
+      </header>
+      <input type="search" class="searchbox" placeholder="Search our store" />
+      <ul>
+          <li><a [routerLink]="['/tousdetails']">Tous</a></li>
+          <li><a [routerLink]="['/cheesecake']">Cheese cakes</a></li>
+          <li><a [routerLink]="['/pies']">Tartes</a></li>
+          <li><a [routerLink]="['/promotion']">Promotions</a></li>
+      </ul>
+  </aside>
+
+  <main id="main">
+    <h3 style="font-family: verdana;">Nos promotions hebdomadaires</h3>
+
+  <article>
+    <h4>Cheese Cake</h4>
+    <p>Prix: <strong>30 DT</strong> - pour 4 personnes</p>
+    <img src="assets/download.jpg" width="500" alt="Cheesecake avec caramel" height="300" />
+  </article>
+
+  </main>
+
+  <footer>
+      <p>Notre adresse est </p><address>Cake's Shop - Rue de la patisserie 216 tunis Tunisie</address>
+      <small>2024 ENIT - All rights reserved</small>
+  </footer>
+</div>

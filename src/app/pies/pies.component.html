@@ -1,0 +1,42 @@
+<header id="mainheader">
+  <nav>
+      <ul>
+          <li><img src="assets/cake.svg" height="55" /></li>
+          <li><a [routerLink]="['/']">Home</a></li>
+          <li><a [routerLink]="['/tousdetails']">Tous</a></li>
+      </ul>
+  </nav>
+</header>
+
+<div style="width:1000px; margin-left: auto; margin-right: auto;">
+  <aside id="leftmenu">
+      <img src="assets/logo.png" />
+      <header>
+          <h4 style="text-align: center;">Explorez nos cakes</h4>
+      </header>
+      <input type="search" class="searchbox" placeholder="Search our store" />
+      <ul>
+          <li><a [routerLink]="['/tousdetails']">Tous</a></li>
+          <li><a [routerLink]="['/cheesecake']">Cheese cakes</a></li>
+          <li><a [routerLink]="['/pies']">Tartes</a></li>
+          <li><a [routerLink]="['/promotion']">Promotions</a></li>
+      </ul>
+  </aside>
+
+  <main id="main">
+      <table>
+          <tr *ngFor="let pie of pies">
+              <td><img [src]="pie.image" width="100"></td>
+              <td>{{ pie.name }}</td>
+              <td>{{ pie.description }}</td>
+              <td>{{ pie.price }} Dt</td>
+              <td><a [routerLink]="['/details', pie.id]">Voir détails</a></td>
+          </tr>
+      </table>
+  </main>
+
+  <footer>
+      <p>Notre adresse est </p><address>Cake's Shop - Rue de la patisserie 216 tunis Tunisie</address>
+      <small>2024 ENIT - All rights reserved</small>
+  </footer>
+</div>
